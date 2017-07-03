@@ -1552,6 +1552,7 @@ module ActiveResource
 
       # Tries to find a resource for a given name; if it fails, then the resource is created
       def find_or_create_resource_for(name)
+        binding.pry
         return reflections[name.to_sym].klass if reflections.key?(name.to_sym)
         resource_name = name.to_s.camelize
 
